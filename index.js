@@ -2,6 +2,7 @@ import express  from 'express';
 import bodyParser from 'body-parser'
 import notesRoutesv1 from './routes/v1/node.js'
 import notesRoutesv2 from './routes/v2/node.js'
+import authRoutes from './routes/v1/auth.js'
 
 
 const app=express()
@@ -19,7 +20,7 @@ app.get('/',(req,res)=>{
 app.use('/v1/notes',notesRoutesv1)
 app.use('/v2/notes',notesRoutesv2)
 
-
+app.use('/v1/login',authRoutes)
 
 
 app.listen(port,()=>{
