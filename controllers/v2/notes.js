@@ -1,6 +1,6 @@
 let notes=[]
 
-export const getNotes2=(req,res)=>{
+export const getNotes=(req,res)=>{
     console.log(notes)
     res.send(notes)
 }
